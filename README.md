@@ -69,14 +69,14 @@ Os projetos Catalogo de Filmes e Pesquisa CEP são formas para aplicar seus conh
 
 - Nela é possível listar os filmes encontrados no arquivo filmes.json:   
     <p align="center">
-      <img alt="Botão listar" src="">
-      <img alt="Lista de filmes" src="">
+      <img alt="Botão listar" src="./exercicios/img/botao_listar.jpg">
+      <img alt="Lista de filmes" src="./exercicios/img/listar_filmes.jpg">
     </p>
     <br>
 
 - Ao inserir o CEP, a API pública Via CEP retorna os dados sugeridos na tela:  
     <p align="center">
-      <img alt="Consulta do CEP" src="./projetos/app_orcamento_pessoal/img/consulta-despesa.png">
+      <img alt="Consulta do CEP" src="./exercicios/img/pesquisa_cep.jpg">
     </p>  
 
 ## 🔗 Links
