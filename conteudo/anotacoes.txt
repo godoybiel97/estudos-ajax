@@ -1,0 +1,96 @@
+AJAX - INTRODUÇÃO
+-----------------
+- Ajax significa Asynchronous JavaScript and XML:
+    - É uma metodologia de programação que possibilita a comunicação assíncrona entre back-end e front-end de aplicações web
+
+    - Potencializou a criação do conceito de web 2.0
+
+
+- Diferença entrea  metodologia tradicional e Ajax:
+    - A metodologia tradicional é composta pelo cliente (front-end), internet (browser) e o servidor (back-end). O cliente realiza
+    uma requisição para o servidor e aguarda uma resposta por alguns milisegundos, podendo ou não serem perceptíveis. Além disso,
+    enquanto aguarda uma resposta, o browser pode ficar indisponível, tornando a aplicação ineficiente
+
+    - A metodologia Ajax utiliza o objeto XMLHTTP Request para solicitar um dado ao servidor, porém, ao aguardar a resposta, a aplicação
+    continua disponível, não limitando o usuário
+
+
+
+AJAX - REQUISIÇÕES SÍNCRONAS E ASSÍNCRONAS
+------------------------------------------
+- A forma de instanciar o objeto Ajax é através do XMLHttpRequest:
+    - let ajax = new XMLHttpRequest()
+
+    - O método open() recebe dois parâmetros, sendo eles o tipo de requisição e a URL:
+        - ajax.open("GET", url)
+
+    - O método send() envia a requisição:
+        - ajax.send()
+
+
+- Síncronas: 
+    - Possbilita apenas uma requisição por vez, fazendo com que o browser aguarde o fim de uma para dar início a próxima
+
+
+- Assíncrona: 
+    - Permite que o browser dispare diversas requisições que são independentes umas das outras, ou seja, não é necessário que a
+    primeira acabe para a próxima ser iniciada
+    
+    - Estados da requisição, sendo a 4 mais importante e utilizada (ReadyState):
+        - 0: request not initialized (requisição não iniciada)
+        - 1: server connection established (conexão estabelecida com servidor)
+        - 2: request received (requisição recebida)
+        - 3: processing request (processando requisição)
+        - 4: request finished and response is ready (requisição finalizada)
+        - readyState e onreadystatechange interpretam o estado e suas 
+        
+    - State e status são informações diferentes que não podem ser confundidas
+
+    - Status não está diretamente ligado ao estado de uma requisição. Por isso, existe 5 grupos diferentes de status:
+        - 100: mensagens informativas
+        - 200: mensagens de sucesso
+        - 300: mensagens de redirecionamento
+        - 400: mensagens de erro (cliente)
+        - 500: mensagens de erro (servidor)
+
+    - responseText é um atributo do objeto XMLHttpRequest que permite retornar a resposta da requisição em texto
+
+
+
+AJAX - O QUE É XML ?
+--------------------
+- XML é a abreviação de eXtensible Markup Language, assemelha-se com o HTML, porém, tem com prioridade estruturar e fornecer informações entre sistemas distintos:
+    - Esse padrão está sendo descontinuado, mas algumas aplicações ainda utilizam. O JSON foi criado para substituí-lo e tem sido mais fluído utilizá-lo entre padrões de APIs
+    
+    - Link para consulta: https://www.w3schools.com/xml/xml_tree.asp
+
+    - Um arquivo XML aberto no browser é referenciado por diversos nós:
+        -   <filme id="1">
+                <titulo>Vingadores: Guerra Infinita</titulo>
+                <resumo>Homem de Ferro, Thor, Hulk e os Vingadores se unem para combater seu inimigo mais poderoso, o maligno Thanos. Em uma missão para coletar todas as seis pedras infinitas, Thanos planeja usá-las para infligir sua vontade maléfica sobre a realidade.</resumo>
+                <genero>Aventura</genero>
+                <genero>Ação</genero>
+                <elenco>
+                    <ator>Robert Downey Jr</ator>
+                    <ator>Chris Hemsworth</ator>
+                    <ator>Mark Ruffalo</ator>
+                </elenco>
+                <dataLancamento pais='Brasil'>26 de abril de 2018</dataLancamento>
+            </filme>
+
+
+- Converter o XML para JSON:
+    - O JS nativo não suporta o padrão XML, mas o JSON sim
+
+    - O XML se apresenta como string, por isso é necessário fazer um parse dele:
+        - É possível realizar esta operação utilizando JQuery, mas também pode-se fazer hard-code
+        - DOMParser(): método nativo do JS
+        - xmlToJson(): função que converte arquivo XML para JSON, geralmente encontra-se disponível na internet
+
+
+- Refatorando um código XML para JSON:
+    - API Restfull é baseada em JSON
+
+    - API Soap é baseada em XML
+
+    - JSON.parse() converte a string para um objeto manipulável
