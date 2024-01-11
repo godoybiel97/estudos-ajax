@@ -69,7 +69,7 @@ Os projetos Catalogo de Filmes e Pesquisa CEP são formas para aplicar seus conh
 
 - Nela é possível listar os filmes encontrados no arquivo filmes.json:   
     <p align="center">
-      <img alt="Botão listar" src="./exercicios/img/botao_listar.jpg">
+      <img alt="Botão listar" height="716px" width="1256px" src="./exercicios/img/botao_listar.jpg">
       <img alt="Lista de filmes" src="./exercicios/img/listar_filmes.jpg">
     </p>
     <br>
